@@ -26,11 +26,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: grab helha main page
+        run: wget www.helha.be 
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: index.html
