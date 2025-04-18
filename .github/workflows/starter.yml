@@ -32,7 +32,7 @@ jobs:
       - name: Azure login
         uses: azure/login@v2
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.SPN_CREDS }}
 
       - uses: actions/upload-artifact@v4
         with:
