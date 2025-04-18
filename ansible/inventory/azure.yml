@@ -1,0 +1,10 @@
+test:
+  hosts:
+    test01:
+      ansible_host: [ajouter ip]
+  # vars:
+  #   ansible_user: mrav
+
+azure:
+  children:
+    test:
