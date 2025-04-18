@@ -32,6 +32,7 @@ jobs:
       - name: Azure login
         uses: azure/login@v2
         with:
+          auth-type: SERVICE_PRINCIPAL
           creds: ${{ secrets.SPN_CREDS }}
 
       - uses: actions/upload-artifact@v4
