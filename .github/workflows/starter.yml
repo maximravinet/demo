@@ -29,6 +29,12 @@ jobs:
       - name: grab helha main page
         run: wget www.helha.be 
 
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          auth-type: SERVICE_PRINCIPAL
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact
